@@ -1,0 +1,22 @@
+@media (max-width: 991px) {
+  .loginForm
+{
+  width: 90%;
+  margin: auto;
+  margin-top: 22vh;
+  margin-bottom: 22vh;
+  height: 40vh;
+  background-color: var(--mcolor);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow:8px 12px 12px 5px rgb(145, 145, 145);
+}
+  .landing form h2
+{
+  font-weight: bold;
+  font-size: 20px;
+  color: var(--scolor) ;
+  margin: 0 0 10px;
+  text-align: center;
+}
+}

@@ -1,0 +1,818 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root
+{
+
+  --mcolor:rgb(14, 97, 97);
+  --scolor:rgb(15, 189, 160);
+  /* --scolor:rgb(0, 255, 213); */
+}
+body {
+  font-family: "Open Sans", sans-serif;
+}
+.landing
+{
+
+  position: relative;
+}
+.landing .text {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  text-align: center;
+  z-index: 2;
+}
+.landing .text h1 {
+  font-size: 34px;
+  margin: 0 0 12px;
+}
+@media (max-width: 575px) {
+  .landing .text h1 {
+    font-size: 26px;
+  }
+  
+}
+.landing .text h1 span {
+  color: var(--scolor);
+}
+.landing.text p {
+  line-height: 1.6;
+  margin: 0;
+  font-size: 20px;
+}
+.container
+{
+  max-width: 95%;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: auto;
+}
+.header
+{
+  display: flex;
+  justify-content: space-between;
+  padding: 10px ;
+  background-color: var(--mcolor);
+  color: var(--scolor);
+}
+.logo
+{
+  font-size: 25px;
+  padding: 10px;
+  font-weight: 300;
+  color: #EEE;
+}
+.logo a
+{
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: 300;
+  padding: 10px;
+  color: #EEE;
+}
+/* .links
+{
+  display: flex;
+  list-style: none;
+  padding: 10px;
+  text-align: center;
+}
+.user
+{
+  display: flex;
+  list-style: none;
+  padding: 10px;
+  text-align: center;
+}
+.links li 
+{
+  margin: 10px;
+}
+.links li a
+{
+  text-decoration: none;
+  color: var(--scolor);
+} */
+.soppingicon i
+{
+  position: absolute;
+  right: 12%;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+.user
+{
+  cursor: pointer;
+}
+/* .user li 
+{
+  margin: 0 7px;
+} */
+.linksContainer
+{display: flex;}
+.linksContainer .user,
+.linksContainer .links {
+  list-style: none;
+  padding-left: 0;
+  padding-top: 20px;
+}
+.linksContainer .user li ,
+.linksContainer .links li{
+  display: inline-block;
+  margin-left: 15px;
+}
+.linksContainer .user li a ,
+.linksContainer .links li a{
+  text-decoration: none;
+  transition: 0.3s;
+  color: #fff;
+}
+.linksContainer .user li a:hover,
+.linksContainer .links li a.activ {
+  color: var(--scolor);
+}
+@media (max-width: 991px) {
+
+  .linksContainer .user {
+    padding: 10px;
+    position: absolute;
+    margin-top:50px;
+    left: 7%;
+    padding-top: 10px;
+    font-size: 18px;
+  }
+  .linksContainer .links {
+    padding: 10px;
+    position: fixed;
+    top:100px;
+    left: 7%;
+    padding-top: 10px;
+    font-size: 18px;
+  }
+  .linksContainer .user li ,
+.linksContainer .links li{
+  display: inline-block;
+  margin-left: 13px;
+}
+  .linksContainer .user li a
+  ,.linksContainer .links{
+    display: block;
+  }  
+  .header
+  {
+    height: 100px;
+  }
+  .soppingicon span
+{
+  width: 20px;
+  display: block;
+  background-color: rgb(192, 17, 61);
+  color: black;
+  font-weight: bold;
+  height: 20px;
+  line-height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: 4px;
+  right: 10%;
+  text-align: center;
+}
+}
+@media (max-width: 576px)
+{
+  .linksContainer .user,
+  .linksContainer .links {
+    font-size: 14px;
+  }
+}
+
+.soppingicon span
+{
+  width: 20px;
+  display: block;
+  background-color: rgb(192, 17, 61);
+  color: black;
+  font-weight: bold;
+  height: 20px;
+  line-height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: 4px;
+  right: 11.5%;
+  text-align: center;
+}
+.header .cardsprodact
+{
+  position: absolute;
+  background-color: #DDD;
+  width: 200px;
+  top: 40px;
+  right: 8%;
+  padding: 10px;
+  color: rgba(0, 0, 0, 0.712);
+  text-align: left;
+  border-radius: 4px;
+  display: none;
+  z-index: 999;
+}
+.header .cardsprodact button
+{
+  width: 80%;
+  margin-left: 10%;
+  height: 40px;
+  font-weight: bold;
+  border-color: transparent;
+  background-color: var(--mcolor);
+  color: #EEE;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.header .cardsprodact p
+{
+  border: 1px solid #eee;
+  padding: 10px;
+  margin: 5px;
+}
+
+
+
+/* login Form */
+
+.loginForm
+{
+  width: 70%;
+  margin: auto;
+  margin-top: 25vh;
+  margin-bottom: 25vh;
+  height: 43vh;
+  background-color: var(--mcolor);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow:8px 12px 12px 5px rgb(145, 145, 145);
+}
+@media (min-width: 576px) {
+  .container {
+    max-width: 95%;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 90%;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 95%;
+  }
+  
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 95%;
+  }  
+}
+
+.loginForm form
+{
+  width: 100%;
+  margin: auto;
+  padding-top: 10px;
+}
+.landing form h2
+{
+  font-weight: bold;
+  font-size: 30px;
+  color: var(--scolor) ;
+  margin: 0 0 60px;
+  text-align: center;
+}
+@media (max-width: 991px) {
+  .loginForm
+{
+  width: 70%;
+  margin: auto;
+  margin-top: 22vh;
+  margin-bottom: 22vh;
+  height: 40vh;
+  background-color: var(--mcolor);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow:8px 12px 12px 5px rgb(145, 145, 145);
+}
+  .landing form h2
+{
+  /* display: none; */
+  font-weight: bold;
+  font-size: 20px;
+  color: var(--scolor) ;
+  margin: 0 0 10px;
+  text-align: center;
+}
+}
+.loginForm form input:not([type="submit"])
+{
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  background-color: #DDD;
+  border-radius: 10px;
+}
+.loginForm form input:not([type="submit"]):focus
+{
+  outline: 1px solid rgb(20, 199, 199);
+}
+
+.landing form input[type="submit"] {
+  border-color: transparent;
+  padding: 10px;
+  width: 100%;
+  border-radius: 10px;
+  background-color: #CCC;
+  color: black;
+  font-size: 20px;
+  cursor: pointer;
+}
+.landing form span
+{
+  display: block;
+  width: 100%;
+  color: var(--scolor);
+  margin-top: 10px;
+  padding: 10px;
+  text-align: center;
+  font-size: larger;
+}
+.landing form span a {
+  text-decoration: none;
+  color: #EEE;
+}
+
+.container > input{
+width: 95%;
+margin: auto;
+height: 30px;
+display: block;
+border: 1px solid #DDD;
+padding: 20px;
+border-radius: 5px;
+color: #666;
+font-size: 18px;
+}
+.container > input:focus
+{
+  outline: 1px solid #EEE;
+}
+
+
+/* start cards */
+.cards
+{
+  margin-top: 60px;
+  margin-bottom: 60px;
+  display: flex;
+}
+.products
+{
+  width: 100%;
+  padding: 10px;
+  float: left;
+  width: 75%;
+}
+.filter
+{
+  float: left;
+  width: 20%;
+  margin-top: 30px;
+  padding: 20px;
+}
+.filter h2{
+  font-weight: bold;
+  font-size: 30px;
+  color: var(--mcolor) ;
+  margin: 0 0 30px;
+  text-align: center;
+}
+.filter select
+{
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  background-color: #DDD;
+  border-radius: 5px;
+}
+.filter select option
+{
+  background-color: #eee;
+  border-radius: 5px;
+  color:var(--mcolor);
+}
+.productBOx
+{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #DDD;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 3px 3px 8px 7px #eee;
+  margin-top: 30px;
+}
+
+.productBOx .pItme
+{
+
+  height: 200px;
+  margin-right: 20px;
+  flex: 1;
+}
+.productBOx .pItme img{
+    border-radius: 10px;
+    width: 95%;
+    height: 100%;
+    
+}
+.productBOx .pDecr{
+  flex: 2;
+}
+.productBOx .pDecr a
+{
+  font-weight: bold;
+  font-size: 30px;
+  color: var(--scolor) ;
+  margin: 0;
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+}
+.productBOx .pDecr h2
+{
+  font-weight: bold;
+  font-size: 30px;
+  color: var(--scolor) ;
+  margin: 0;
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+}
+.productBOx .pDecr p,
+.productBOx .pDecr span
+{
+  color: #666;
+  line-height: 1.6;
+  font-size: 18px;
+  margin-top: 15px;
+}
+.productBOx .pAction
+{
+  flex: 1;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+}
+.productBOx .pAction .addToCard
+{
+  width: 80%;
+  margin-left: 10%;
+  height: 40px;
+  font-weight: bold;
+  border-color: transparent;
+  background-color: var(--mcolor);
+  color: #EEE;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.edite
+{
+  width: 100px;
+  height: 40px;
+  padding: 10px;
+  margin-top: 15px;
+  margin-left: 15px;
+  font-weight: bold;
+  font-size: 16px;
+  border-color: transparent;
+  background-color: var(--mcolor);
+  color: #EEE;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.productBOx .pAction i
+{ 
+  font-size:32px;
+  position: absolute;
+  top: 80%;
+  right: 10%;
+  color: var(--mcolor);
+  cursor: pointer;
+}
+@media (max-width : 720px) {
+  .productBOx
+  {
+    text-align: center;
+    display: block;
+  }
+  .productBOx .pAction .icon
+  {
+  margin-left:50% ;
+  margin-top: 5px;
+  transform: translateX(-50%);
+  }
+  .productBOx .pDecr p,
+.productBOx .pDecr span
+{
+  font-size: 14px;
+  margin: 10px;
+}
+}
+@media (min-width : 1200px)
+{
+  .products
+{
+  width: 100%;
+  padding: 10px;
+  float: left;
+  width: 75%;
+}
+}
+
+
+.noproduct{
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  padding: 30px;
+  background-color: var(--mcolor);
+  color: var(--scolor);
+  border-radius: 5px;
+  display: none;
+  font-size: 20px;
+}
+
+/* end cards */
+
+
+@media (max-width: 720px) {
+  .products
+  {
+    width: 100%;
+  }
+  .filter
+  {
+    width: 100%;
+  }
+  .products .productBOx
+  {
+    width: 100%;
+    height: 472px;
+  }
+  .productBOx .pAction i
+  {
+    top: 60px;
+    left: 50px;
+  }
+}
+@media (max-width: 992px) {
+  .products
+  {
+    width: 100%;
+  }
+  .filter
+  {
+    text-align: left;
+    width: 80%;
+  }
+  .filter h2
+  {
+    text-align: left;
+  }
+  .products .productBOx
+  {
+    width: 100%;
+  }
+  
+}
+
+
+
+/* start Cards details */
+
+
+.itmeDetails
+{
+  width: 100%;
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid #DDD;
+  box-shadow:5px 4px 14px 12px #ccc;
+}
+.itmeDetails img
+{
+  width: 90%;
+  height: 400px;
+  margin-left:5%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.itmeDetails h2 
+{
+  font-weight: bold;
+  font-size: 30px;
+  color: var(--scolor) ;
+  margin: 20px 0 20px;
+  text-align: center;
+}
+.itmeDetails p
+,.itmeDetails span
+{
+  color: #666;
+  line-height: 1.6;
+  font-size: 18px;
+  padding: 20px;
+  margin-top: 15px;
+}
+
+.creatBtn
+{
+  position: fixed;
+  bottom: 35px;
+  right: 35px;
+  width: 50px;
+  height: 50px;
+  background-color: var(--mcolor);
+  text-align: center;
+  border-radius: 50%;
+  font-size: 20px;
+  line-height: 50px;
+  color: #EEE;
+}
+.creatBtn:hover
+{
+  opacity: .7;
+}
+/* create products  */
+
+
+.createproduct .createform
+,.editprfile 
+{
+  width: 70%;
+  margin: auto;
+  margin-top: 18vh;
+  margin-bottom: 25vh;
+  height: 43vh;
+  background-color: var(--mcolor);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow:8px 12px 12px 5px rgb(145, 145, 145);
+}
+.createform form
+,.editprfile form 
+{
+  width: 100%;
+  margin: auto;
+  padding-top: 30px;
+}
+.createform form input:not([type="submit"])
+,.createform form select
+,.editprfile form input:not([type="submit"])
+{
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  background-color: #DDD;
+  border-radius: 10px;
+}
+.createform form input:not([type="submit"]):focus
+,.createform form select:focus,
+.editprfile form input:not([type="submit"]):focus
+{
+  outline: 1px solid rgb(20, 199, 199);
+}
+.createform form select option
+{
+  background-color: #eee;
+  border-radius: 5px;
+  color:var(--mcolor);
+}
+
+.createform form input[type="submit"] ,
+.editprfile form input[type="submit"] 
+{
+  border-color: transparent;
+  padding: 10px;
+  width: 100%;
+  border-radius: 10px;
+  background-color: #CCC;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.edit
+{
+  width: 50%;
+  height: 40px;
+  font-weight: bold;
+  border-color: transparent;
+  background-color: var(--mcolor);
+  color: #EEE;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.itmeqty
+{
+  background-color: var(--mcolor);
+  width: 25px;
+  height: 25px;
+  display: inline-block;
+  color: #DDD;
+  font-weight: bold;
+  text-align: center;
+  line-height: 25px;
+  border-radius: 50%;
+  margin-left: 20px;
+}
+
+
+/*********profile************/
+
+.profile 
+{
+  width: 100%;
+  margin-top: 60px;
+  padding: 10px;
+  border: 1px solid #DDD;
+  box-shadow:5px 4px 14px 12px #ccc;
+  text-align: center;
+}
+.profilepage .profile .img
+{
+  width: 300px;
+  height: 300px;
+  display: block;
+  border-radius: 50%;
+  margin: auto;
+  margin-top: 20px;
+  box-shadow:5px 4px 14px 12px #ccc;
+}
+.profilepage .profile .userP
+{
+  color: var(--mcolor);
+  font-size: 30px;
+  margin: 20px;
+  margin-top: 40px;
+  font-weight: bold;
+}
+.profilepage .profile .emailP,
+.profilepage .profile .productLp
+{
+  margin: 20px;
+  color: #333;
+  text-align: left;
+}
+.profilepage .profile .editP
+{
+  display: block;
+  width: 100px;
+  height: 40px;
+  line-height: 40px;
+  font-weight: bold;
+  background-color: var(--mcolor);
+  color: #EEE;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+@media (min-width: 992px){
+.container {
+    width: 95%;
+}
+}
+@media (min-width: 768px){
+.container {
+    width: 90%;
+}
+}
+@media (min-width: 576px){
+  .container {
+    width: 95%;
+}
+}

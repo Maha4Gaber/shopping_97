@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sopping card</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/regester.css" />
+  </head>
+
+  <body>
+    <div class="landing">
+      <div class="container">
+        <div class="header">
+          <div class="logo">Shopping</div>
+          <div class="linksContainer">
+            <ul class="links">
+              <li><a href="login.html">Sign In</a></li>
+
+              <li><a href="regester.html">Sign UP</a></li>
+            </ul>
+            <ul class="user">
+              <li id="userName"></li>
+              <li>Log Out</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- login form -->
+      <div class="container">
+        <div class="loginForm">
+          <form action="login.html">
+            <h2>Register user</h2>
+            <input type="text" placeholder="Your Name..." id="username" />
+            <input
+              type="email"
+              name=""
+              placeholder="Your email..."
+              id="email"
+            />
+            <input
+              type="password"
+              name=""
+              id="password"
+              placeholder="Your password.."
+            />
+            <input type="submit" value="register" id="signUp" />
+            <span>have Account <a href="login.html">sign in</a></span>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/regester.js"></script>
+  </body>
+</html>
